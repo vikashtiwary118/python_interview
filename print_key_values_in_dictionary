@@ -121,6 +121,47 @@ Traceback (most recent call last):
 ...
 StopIteration
 ...................................................................................................................
+Q>what are the anonymous function in python??
+....>In Python, anonymous function is a function that is defined without a name.
+     While normal functions are defined using the def keyword.
+....>in Python anonymous functions are defined using the lambda keyword.     
+
+Q>What are lembda function in python??
+....>>anonymous functions are also called lambda functions.
+.....>> Syntax of lambda function in python
+       lambda arguments: expression
+......>>Lambda functions can have any number of arguments but only one expression. 
+        The expression is evaluated and returned.
+        Lambda functions can be used wherever function objects are required.
+......................................................................................................................
+***>>Example of lambda function
+# Program to show the use of lambda functions
+
+double = lambda x: x * 2
+
+# Output: 10
+print(double(5))
+
+...>>Example use with filter
+# Program to filter out only the even items from a list
+
+my_list = [1, 5, 4, 6, 8, 11, 3, 12]
+
+new_list = list(filter(lambda x: (x%2 == 0) , my_list))
+
+# Output: [4, 6, 8, 12]
+print(new_list)
+
+.....>>Example use with filter
+# Program to double each item in a list using map()
+
+my_list = [1, 5, 4, 6, 8, 11, 3, 12]
+
+new_list = list(map(lambda x: x * 2 , my_list))
+
+# Output: [2, 10, 8, 12, 16, 22, 6, 24]
+print(new_list)
+...............................................................................................................................
 
 
 
