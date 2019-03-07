@@ -1,3 +1,6 @@
+Q>If we doesn't return anything in dajango funtion.then what does it return??
+Ans>>Django function bydefault retun "None".
+................................................................................................
 
 #Creating Dictionaries with string as key and int as value                             
 wordFrequency = {
