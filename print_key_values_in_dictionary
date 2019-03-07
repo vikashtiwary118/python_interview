@@ -54,5 +54,75 @@ print(my_iter.__next__())
 ## This will raise error, no items left
 next(my_iter)
 ................................................................................................................
+Q>what is generator??
+.....>There is a lot of overhead in building an iterator in Python; we have to implement a class with __iter__() and __next__() method, 
+      keep track of internal states, raise StopIteration when there was no values to be returned etc.
+.....>This is both lengthy and counter intuitive. Generator comes into rescue in such situations.
+......>Python generators are a simple way of creating iterators.
+......>Simply speaking, a generator is a function that returns an object (iterator) which we can iterate over (one value at a time).
+...................................................................................................................
+Q>How to create generator in python?
+.....>It is fairly simple to create a generator in Python.
+      It is as easy as defining a normal function with yield statement instead of a return statement.
+.......>If a function contains at least one yield statement (it may contain other yield or return statements), 
+        it becomes a generator function. 
+        Both yield and return will return some value from a function.
+.......>The difference is that, while a return statement terminates a function entirely,
+        yield statement pauses the function saving all its states and later continues from there on successive calls.
+.........................................................................................................................
+Q>Difference between Generator function and Normal Function
+......>1>Generator function contains one or more yield statement.
+       2>When called, it returns an object (iterator) but does not start execution immediately.
+       3>Methods like __iter__() and __next__() are implemented automatically. So we can iterate through the items using next().
+       4>Once the function yields, the function is paused and the control is transferred to the caller.
+       5>Finally, when the function terminates, StopIteration is raised automatically on further calls.
+...........................................................................................................................
+***We take the simple example of Generator
+# A simple generator function
+def my_gen():
+    n = 1
+    print('This is printed first')
+    # Generator function contains yield statements
+    yield n
+
+    n += 1
+    print('This is printed second')
+    yield n
+
+    n += 1
+    print('This is printed at last')
+    yield n
+O/P:-
+>>> # It returns an object but does not start execution immediately.
+>>> a = my_gen()
+
+>>> # We can iterate through the items using next().
+>>> next(a)
+This is printed first
+1
+>>> # Once the function yields, the function is paused and the control is transferred to the caller.
+
+>>> # Local variables and theirs states are remembered between successive calls.
+>>> next(a)
+This is printed second
+2
+
+>>> next(a)
+This is printed at last
+3
+
+>>> # Finally, when the function terminates, StopIteration is raised automatically on further calls.
+>>> next(a)
+Traceback (most recent call last):
+...
+StopIteration
+>>> next(a)
+Traceback (most recent call last):
+...
+StopIteration
+...................................................................................................................
+
+
+
 
 
