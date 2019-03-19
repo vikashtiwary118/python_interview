@@ -180,6 +180,9 @@ print(new_list)
  .....>python is well suited object oriented programming language in that it allows the definition of classes along with composition and inheritance. 
        Python does not have access specifiers (like C++’s public, private), the justification for this point is given as “we are all adults here”
 ......>python function are first class object.
-
+......>writing python code is quick but running code is slower than copiled programming language.as for example c++,java etc
+.............................................................................................................................
+#what is the difference between deep and shallow copy?
+......>
 
 
