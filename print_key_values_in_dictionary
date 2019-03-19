@@ -165,8 +165,21 @@ new_list = list(map(lambda x: x * 2 , my_list))
 # Output: [2, 10, 8, 12, 16, 22, 6, 24]
 print(new_list)
 ...............................................................................................................................
-
-
+#difference between list and tuples
+....>>list--->list are mutable i.e it can be edited
+              list are slower than the touple
+              syntex:list_1=[10,"chelsea",20]
+      tuples--->tuples are immutable i.e it can't be editable
+                tuples are faster than list
+                syntax:list_2=(10,"chesla",12)
+                
+ ............................................................................................................................
+ #what are the key feature of python?
+ ....>python is an interpreted language.Unlike to language 'C' python doesn't required to compile before run it.
+ .....>python is dynamically typed, this means you don't  required to state the variable.i.e x=1.23 ,x="Hello"
+ .....>python is well suited object oriented programming language in that it allows the definition of classes along with composition and inheritance. 
+       Python does not have access specifiers (like C++’s public, private), the justification for this point is given as “we are all adults here”
+......>python function are first class object.
 
 
 
